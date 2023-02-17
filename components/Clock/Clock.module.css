@@ -6,14 +6,14 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 2px 30px rgba(0, 0, 0, 0.2); */
   font-size: 24px;
-  color: #444;
+  /* color: #444; */
   text-align: center;
 }
 
 .clock::after {
-  background: #aaa;
+  background: transparent;
   content: "";
   width: 12px;
   height: 12px;
@@ -23,14 +23,13 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 2px solid #fff;
 }
 
 .hour_hand {
   position: absolute;
   width: 6px;
   height: 60px;
-  background: #222;
+  background: #fff;
   top: 30%;
   left: 49%;
   transform-origin: bottom;
@@ -40,7 +39,7 @@
   position: absolute;
   width: 4px;
   height: 80px;
-  background: #444;
+  background: #fff;
   top: 22.5%;
   left: 49%;
   transform-origin: bottom;
@@ -50,7 +49,7 @@
   position: absolute;
   width: 2px;
   height: 118px;
-  background: red;
+  background: #fff;
   top: 10.5%;
   left: 50%;
   transform-origin: bottom;
@@ -64,37 +63,43 @@
 
 .twelve {
   top: 10px;
-  left: 46%;
+  left: 50%;
 }
 
 .one {
   top: 10%;
   right: 26%;
+  transform: rotate(30deg)
 }
 
 .eleven {
   top: 10%;
   left: 26%;
+  transform: rotate(-30deg);
 }
 
 .two {
   top: 25%;
   right: 10%;
+  transform: rotate(50deg);
 }
 
 .three {
   right: 10px;
   top: 46%;
+  transform: rotate(90deg);
 }
 
 .four {
   right: 30px;
   top: 67%;
+  transform: rotate(-50deg);
 }
 
 .five {
   right: 78px;
   top: 80%;
+  transform: rotate(-30deg);
 }
 
 .six {
@@ -105,19 +110,27 @@
 .seven {
   left: 80px;
   top: 82%;
+  transform: rotate(30deg);
 }
 
 .eight {
   left: 30px;
   top: 67%;
+  transform: rotate(50deg);
 }
 
 .nine {
   left: 10px;
   top: 46%;
+  transform: rotate(90deg);
 }
 
 .ten {
   top: 25%;
   left: 10%;
+  transform: rotate(-50deg);
+}
+
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve {
+  color: #fff
 }
