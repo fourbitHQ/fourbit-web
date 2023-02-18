@@ -10,7 +10,7 @@ const HomePage = () => {
       <div className="absolute flex flex-col leading-none rounded-md py-2 font-semibold text-white text-center w-full h-full">
        <Clock/>
       </div>
-      <div className="absolute flex gap-4 justify-center left-0 right-0 bottom-32 m-auto rounded-md  py-2 text-[30px] md:text-[40px] font-semibold text-white text-center h-[10vh] w-[300px] animate-ping">
+      <div className="absolute flex gap-4 justify-center left-0 right-0 bottom-32 m-auto rounded-md  py-2 text-[30px] md:text-[40px] font-semibold text-white text-center h-[10vh] w-[300px] animate-pulse">
         <span>COMING</span>
         <span>SOON</span>
       </div>
