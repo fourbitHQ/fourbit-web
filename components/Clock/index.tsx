@@ -20,6 +20,7 @@ console.log({date})
 console.log("hour, minute, seconds", date?.getHours(), date?.getMinutes(), date?.getSeconds())
   return (
     <div className={styles.clock}>
+      <div className={styles.logo}>fourbit.io</div>
         <div
           className={styles.hour_hand}
           style={hourHandStyle}

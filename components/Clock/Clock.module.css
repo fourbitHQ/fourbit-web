@@ -1,6 +1,6 @@
 .clock {
-  width: 300px;
-  height: 300px;
+  width:350px;
+  height: 350px;
   border-radius: 50%;
   position: absolute;
   top: 40%;
@@ -20,38 +20,48 @@
   border-radius: 50%;
   position: absolute;
   z-index: 2;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.logo {
+  position: absolute;
+  font-size: 22px;
+  color: #fff;
+  top: 65%;
+  left: 38%;
+  transform-origin: bottom;
+
 }
 
 .hour_hand {
   position: absolute;
   width: 6px;
-  height: 60px;
+  height: 70px;
   background: #fff;
-  top: 30%;
-  left: 49%;
+  top: 31%;
+  left: 50%;
   transform-origin: bottom;
 }
 
 .min_hand {
   position: absolute;
   width: 4px;
-  height: 80px;
+  height: 100px;
   background: #fff;
-  top: 22.5%;
-  left: 49%;
+  top: 23%;
+  left: 50%;
   transform-origin: bottom;
 }
 
 .sec_hand {
   position: absolute;
   width: 2px;
-  height: 118px;
+  height: 130px;
   background: #fff;
-  top: 10.5%;
-  left: 50%;
+  top: 14.5%;
+  left: 51%;
   transform-origin: bottom;
 }
 
@@ -132,5 +142,6 @@
 }
 
 .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve {
-  color: #fff
+  color: #fff;
+  font-size: 35px;
 }
