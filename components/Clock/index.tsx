@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from './Clock.module.css'
 function Clock() {
-  
+
   const [date, setDate] = useState(new Date());
 
 
@@ -9,7 +9,7 @@ function Clock() {
     const timer = setInterval(() => setDate(new Date()), 1000);
     return () => clearInterval(timer);
   }, []);
-console.log({date})
+  
   const secondHandStyle = {
     transform: `rotate(${date.getSeconds() * 6}deg)`,
   };
@@ -19,6 +19,9 @@ console.log({date})
   const hourHandStyle = {
     transform: `rotate(${date.getHours() * 30}deg)`,
   };
+
+  console.log({hourHandStyle, minuteHandStyle, secondHandStyle});
+
 console.log("hour, minute, seconds", date?.getHours(), date?.getMinutes(), date?.getSeconds())
   return (
     <div className={styles.clock}>
