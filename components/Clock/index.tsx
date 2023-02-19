@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import styles from './Clock.module.css'
 function Clock() {
+  
   const [date, setDate] = useState(new Date());
+
 
   useEffect(() => {
     const timer = setInterval(() => setDate(new Date()), 1000);
