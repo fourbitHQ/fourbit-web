@@ -55,10 +55,7 @@ module.exports = {
       },
       backgroundImage: {
         'home-banner-image': "url(/home/home-banner-img.jpeg)",
-      },
-      borderWidth: {
-        1.5: "1.5px",
-      },
+      }
     },
   },
   plugins: [],
