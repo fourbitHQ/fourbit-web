@@ -54,7 +54,7 @@ module.exports = {
         top: "rgb(0 0 0 / 14%) 0px 4px 32px",
       },
       backgroundImage: {
-        'home-banner-image': "url(/home/Home-banner-img.jpeg)",
+        'home-banner-image': "url(/home/home-banner-img.jpeg)",
       },
       borderWidth: {
         1.5: "1.5px",
