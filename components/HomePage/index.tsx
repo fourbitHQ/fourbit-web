@@ -4,9 +4,6 @@ const HomePage = () => {
   return (
     <div className="bg-home-banner-image bg-cover h-screen relative">
       <div className="absolute top-0 left-0 right-0 bottom-0 bg-[rgba(0,0,0,0.5)]">
-        {/* <div className="absolute left-10 top-10 text-[20px] md:text-[30px] font-semibold text-white h-[10vh] w-[300px]">
-          <span>fourbit</span>
-        </div> */}
         <div className="absolute flex flex-col leading-none rounded-md py-2 font-semibold text-white text-center w-full h-full">
           <Clock />
         </div>
