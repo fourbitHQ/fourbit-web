@@ -6,6 +6,7 @@ export default function Home() {
     <>
       <Head>
         <title>fourbit</title>
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <HomePage />
     </>
