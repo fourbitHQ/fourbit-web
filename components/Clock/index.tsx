@@ -7,22 +7,36 @@ function Clock() {
 
   useEffect(() => {
     const timer = setInterval(() => setDate(new Date()), 1000);
-    return () => clearInterval(timer);
+    // return () => clearInterval(timer);
   }, []);
+
+  let hours = ((date.getHours() * 360 /12) + (date.getMinutes()* (360/60) /12));
+  let minutes = ((date.getMinutes()/360/60) + (date.getSeconds()*(360/60) /60));
+  let seconds = date.getSeconds() * 360 /60;
   
   const secondHandStyle = {
-    transform: `rotate(${date.getSeconds() * 6}deg)`,
+    transform: `rotate(${seconds ? seconds : 0}deg)`,
   };
   const minuteHandStyle = {
-    transform: `rotate(${date.getMinutes() * 6}deg)`,
+    transform: `rotate(${minutes ? minutes : 0}deg)`,
   };
   const hourHandStyle = {
-    transform: `rotate(${date.getHours() * 30}deg)`,
+    transform: `rotate(${hours ? hours : 0}deg)`,
   };
 
-  console.log({hourHandStyle, minuteHandStyle, secondHandStyle});
+  // const secondHandStyle = {
+  //   transform: `rotate(${date.getSeconds() * 6}deg)`,
+  // };
+  // const minuteHandStyle = {
+  //   transform: `rotate(${date.getMinutes() * 6}deg)`,
+  // };
+  // const hourHandStyle = {
+  //   transform: `rotate(${date.getHours() * 30 + (date.getSeconds() * 0)}deg)`,
+  // };
 
-console.log("hour, minute, seconds", date?.getHours(), date?.getMinutes(), date?.getSeconds())
+//   console.log({hourHandStyle, minuteHandStyle, secondHandStyle});
+
+// console.log("hour, minute, seconds", date?.getHours(), date?.getMinutes(), date?.getSeconds())
   return (
     <div className={styles.clock}>
       <div className={styles.logo}>fourbit.io</div>
