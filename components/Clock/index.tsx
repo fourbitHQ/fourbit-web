@@ -10,7 +10,7 @@ function Clock() {
     // return () => clearInterval(timer);
   }, []);
 
-  let hours = date.getHours();
+  let hours = date.getHours()  % 12;
   let minutes = date.getMinutes();
   let seconds = date.getSeconds();
 
@@ -68,25 +68,6 @@ console.log("hour, minute, seconds", {hours,hoursDeg}, {minutes,minutesDeg}, {se
         <span className={styles.ten}>|</span>
         <span className={styles.eleven}>|</span>
       </div>
-    
-    // <div className="flex justify-center py-10 group">
-    //   <div className="relative flex items-center justify-end w-[500px] h-[500px] overflow-hidden bg-gray-900 rounded-full ">
-    //     {/* <div className="absolute w-1/2 h-1 bg-blue-400 rounded-full or igin-left -rotate-12" style={hourHandStyle} />
-    //     <div className="absolute w-1/2 h-1 bg-green-400 rounded-full origin-left rotate-[440]" style={minuteHandStyle}/>
-    //     <div className="absolute w-1/2 h-1 bg-red-400 rounded-full origin-left rotate-[340]" style={secondHandStyle} /> */}
-
-    //     <div className="absolute w-1/2 h-1  origin-left" style={hourHandStyle}>
-    //       <div className="w-1/2 h-full bg-blue-400 rounded-full"  />
-    //     </div>
-    //     <div className="absolute w-1/2 h-1  origin-left" style={minuteHandStyle}>
-    //       <div className="w-3/4 h-full bg-green-400 rounded-full"  />
-    //     </div>
-    //     <div className="absolute w-1/2 h-1  origin-left" style={secondHandStyle}>
-    //       <div className="w-full h-full bg-red-400 rounded-full"  />
-    //     </div>
-
-    //   </div>
-    // </div>
   );
 }
 
