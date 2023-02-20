@@ -14,7 +14,7 @@ function Clock() {
   let minutes = date.getMinutes();
   let seconds = date.getSeconds();
 
-  let hoursDeg = ((hours / 12) * 360) + ((minutes/60)*30)
+  let hoursDeg = ((hours / 12) * 360) + ((minutes/60)*30) +  ((seconds/180))
   let minutesDeg = ((minutes / 60) * 360) + ((seconds/60)*6)
   let secondsDeg = ((seconds / 60) * 360)
   
