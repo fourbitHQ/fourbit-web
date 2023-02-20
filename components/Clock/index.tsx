@@ -38,9 +38,8 @@ function Clock() {
   //   transform: `rotate(${date.getHours() * 30 + (date.getSeconds() * 0)}deg)`,
   // };
 
-//   console.log({hourHandStyle, minuteHandStyle, secondHandStyle});
 
-// console.log("hour, minute, seconds", date?.getHours(), date?.getMinutes(), date?.getSeconds())
+console.log("hour, minute, seconds", {hours,hoursDeg}, {minutes,minutesDeg}, {seconds,secondsDeg})
   return (
     <div className={styles.clock}>
       <div className={styles.logo}>fourbit.io</div>
