@@ -10,18 +10,22 @@ function Clock() {
     // return () => clearInterval(timer);
   }, []);
 
-  let hours = ((date.getHours() * 360 /12) + (date.getMinutes()* (360/60) /12));
-  let minutes = ((date.getMinutes()/360/60) + (date.getSeconds()*(360/60) /60));
-  let seconds = date.getSeconds() * 360 /60;
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let seconds = date.getSeconds();
+
+  let hoursDeg = ((hours / 12) * 360) + ((minutes/60)*30)
+  let minutesDeg = ((minutes / 60) * 360) + ((seconds/60)*6)
+  let secondsDeg = ((seconds / 60) * 360)
   
   const secondHandStyle = {
-    transform: `rotate(${seconds ? seconds : 0}deg)`,
+    transform: `rotate(${secondsDeg}deg)`,
   };
   const minuteHandStyle = {
-    transform: `rotate(${minutes ? minutes : 0}deg)`,
+    transform: `rotate(${minutesDeg}deg)`,
   };
   const hourHandStyle = {
-    transform: `rotate(${hours ? hours : 0}deg)`,
+    transform: `rotate(${hoursDeg}deg)`,
   };
 
   // const secondHandStyle = {
